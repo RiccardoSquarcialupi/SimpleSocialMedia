@@ -2,8 +2,7 @@ import postPic1 from '../img/postpic1.jpg';
 import postPic2 from '../img/postpic2.jpg';
 import postPic3 from '../img/postpic3.jpg';
 
-export const PostsData = [
-    {
+export const PostsData = [{
         img: postPic1,
         name: 'Tzuyu',
         desc: "Happy new year #2023",
