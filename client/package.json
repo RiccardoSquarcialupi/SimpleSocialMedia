@@ -30,7 +30,7 @@
     "yarn": "^1.22.19"
   },
   "scripts": {
-    "all": "concurrently --kill-others \"yarn start\" \"(cd ../server && npm start)\" \"(cd ../socket && npm start)\"",
+    "all": "concurrently --kill-others \"npm start\" \"(cd ../server && npm start)\" \"(cd ../socket && npm start)\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

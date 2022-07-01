@@ -57,7 +57,7 @@ const Auth = () => {
 
         <div className="Webname">
           <h1>SimpleSocialMedia</h1>
-          <h6>Explore world's ideas</h6>
+          <h6>Explore world's idea</h6>
         </div>
       </div>
 
