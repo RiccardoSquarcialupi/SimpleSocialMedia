@@ -1,11 +1,15 @@
 import React from "react";
-import { UilSearch } from "@iconscout/react-unicons";
 import Logo from "../../img/logo.png";
-import "./LogoSearch.css";
-export default function LogoSearch() {
+import { Link } from "react-router-dom";
+import './LogoSearch.css'
+import { UilSearch } from '@iconscout/react-unicons'
+
+const LogoSearch = () => {
   return (
     <div className="LogoSearch">
-      <img src={Logo} alt="" />
+      <Link to="../home">
+        <img src={Logo} style={{ width: "75%" }} alt="" />
+      </Link>
       <div className="Search">
         <input type="text" placeholder="#Explore" />
         <div className="s-icon">
@@ -14,4 +18,6 @@ export default function LogoSearch() {
       </div>
     </div>
   );
-}
+};
+
+export default LogoSearch;
