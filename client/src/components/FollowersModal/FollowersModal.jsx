@@ -1,12 +1,12 @@
 import React from "react";
-import {Textarea, Modal, useMantineTheme } from "@mantine/core";
+import { Modal, useMantineTheme } from "@mantine/core";
 import FollowersCard from "../FollowersCard/FollowersCard";
 
 const FollowersModal = ({ modalOpened, setModalOpened }) => {
   const theme = useMantineTheme();
   return (
-    <Modal 
-      size="60%"
+    <Modal
+      size="70%"
       heigth
       className="mainModal"
       transition="fade"
@@ -23,9 +23,11 @@ const FollowersModal = ({ modalOpened, setModalOpened }) => {
       onClose={() => setModalOpened(false)}
       style={{}}
     >
-  
-      <FollowersCard location="modal" />
-            
+      {
+        <div>
+          <FollowersCard location="modal" />
+        </div>
+      }
     </Modal>
   );
 };

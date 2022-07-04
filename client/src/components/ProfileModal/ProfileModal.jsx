@@ -16,6 +16,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
   const param = useParams();
 
   const { user } = useSelector((state) => state.authReducer.authData);
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };

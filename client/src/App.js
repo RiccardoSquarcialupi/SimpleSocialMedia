@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useSearchParams } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Auth from "./pages/Auth/Auth";
 import Profile from "./pages/Profile/Profile";
@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import Chat from "./pages/Chat/Chat";
 
 function App() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const user = useSelector((state) => state.authReducer.authData);
   return (
     <div
