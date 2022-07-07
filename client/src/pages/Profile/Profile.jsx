@@ -1,19 +1,25 @@
 import React from "react";
-import PostSide from "../../components/PostSide/PostSide";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
-import ProfileLeft from "../../components/ProfileLeft/ProfileLeft";
-import RightSide from "../../components/RightSide/RightSide";
+import FollowersCard from "../../components/FollowersCard/FollowersCard";
+import PostSide from "../../components/PostSide/PostSide";
+import Topbar from "../../components/TopBar/Topbar";
+import TrendCard from "../../components/TrendCard/TrendCard";
 import "./Profile.css";
 const Profile = () => {
   return (
-    <div className="Profile">
-      <ProfileLeft />
-      <div className="Profile-center">
-        <ProfileCard location = 'profilePage'/>
-      <PostSide/>
+    <>
+      <Topbar />
+      <div className="profile">
+        <TrendCard />
+        <div className="profileRight">
+          <ProfileCard location="profilePage" />
+          <div className="profileRightBottom">
+            <PostSide />
+            <FollowersCard profile />
+          </div>
+        </div>
       </div>
-      <RightSide/>
-    </div>
+    </>
   );
 };
 

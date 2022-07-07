@@ -3,7 +3,6 @@ import "./PostShare.css";
 import { UilScenery } from "@iconscout/react-unicons";
 import { UilPlayCircle } from "@iconscout/react-unicons";
 import { UilLocationPoint } from "@iconscout/react-unicons";
-import { UilSchedule } from "@iconscout/react-unicons";
 import { UilTimes } from "@iconscout/react-unicons";
 import { useDispatch, useSelector } from "react-redux";
 import { uploadImage, uploadPost } from "../../redux/actions/UploadAction";
@@ -76,6 +75,13 @@ const PostShare = () => {
           required
           ref={desc}
         />
+        <button 
+          className="button ps-button"
+          onClick={handleUpload}
+          disabled={loading}
+        >
+          {loading ? "uploading" : "Share"}
+        </button>
         <div className="postOptions">
           <div
             className="option"
@@ -94,17 +100,6 @@ const PostShare = () => {
             <UilLocationPoint />
             Location
           </div>
-          <div className="option" style={{ color: "var(--shedule)" }}>
-            <UilSchedule />
-            Shedule
-          </div>
-          <button
-            className="button ps-button"
-            onClick={handleUpload}
-            disabled={loading}
-          >
-            {loading ? "uploading" : "Share"}
-          </button>
 
           <div style={{ display: "none" }}>
             <input type="file" ref={imageRef} onChange={onImageChange} />

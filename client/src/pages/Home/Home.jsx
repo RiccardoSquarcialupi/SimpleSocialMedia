@@ -1,15 +1,20 @@
+import { Grid } from "@mui/material";
 import React from "react";
+import FollowersCard from "../../components/FollowersCard/FollowersCard";
 import PostSide from "../../components/PostSide/PostSide";
-import ProfileSide from "../../components/ProfileSide/ProfileSide";
-import RightSide from "../../components/RightSide/RightSide";
+import Topbar from "../../components/TopBar/Topbar";
+import TrendCard from "../../components/TrendCard/TrendCard";
 import "./Home.css";
 const Home = () => {
   return (
-    <div className="Home">
-      <ProfileSide/>
-      <PostSide />
-      <RightSide />
-    </div>
+    <>
+      <Topbar />
+      <div className="Home">
+        <TrendCard />
+        <PostSide />
+        <FollowersCard />
+      </div>
+    </>
   );
 };
 

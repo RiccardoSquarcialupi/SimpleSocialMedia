@@ -7,6 +7,9 @@
     padding: 1rem;
     border-radius: 1rem;
     width: 90%;
+    border-color: rgb(140, 140, 140);
+    border-style: solid;
+    border-width: 2px;
 }
 
 .infoHead{

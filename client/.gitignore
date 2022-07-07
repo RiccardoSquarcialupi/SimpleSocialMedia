@@ -3,6 +3,7 @@
 # dependencies
 client/node_modules
 client/.yarn
+server/public
 .yarn/*
 !.yarn/cache
 !.yarn/patches

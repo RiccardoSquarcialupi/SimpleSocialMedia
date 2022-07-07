@@ -11,7 +11,7 @@ export const TrendData = [{
         shares: 99,
     },
     {
-        name: "Star Wars: The Force Awakens",
+        name: "Titanic",
         shares: 100,
     },
     {

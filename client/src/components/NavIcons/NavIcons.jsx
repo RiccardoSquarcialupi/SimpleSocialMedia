@@ -1,18 +1,24 @@
 import React from "react";
-
-import Home from "../../img/home.png";
-import Comment from "../../img/comment.png";
+import { useSelector } from "react-redux";
+import SendIcon from "@mui/icons-material/Send";
+import HomeIcon from "@mui/icons-material/Home";
+import Logo from "../../img/logo.png";
+import PersonIcon from "@mui/icons-material/Person";
 
 import { Link } from "react-router-dom";
 
 const NavIcons = () => {
+    const { user } = useSelector((state) => state.authReducer.authData);
   return (
     <div className="navIcons">
       <Link to="../home">
-        <img src={Home} style={{width:"110%"}}alt="" />
+        <HomeIcon fontSize="large" />
+      </Link>
+      <Link to={`/profile/${user._id}`}>
+        <PersonIcon fontSize="large" />
       </Link>
       <Link to="../chat">
-        <img src={Comment} alt="" />
+        <SendIcon fontSize="large" />
       </Link>
     </div>
   );

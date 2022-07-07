@@ -1,13 +1,12 @@
 import React, { useRef, useState } from "react";
 import ChatBox from "../../components/ChatBox/ChatBox";
 import Conversation from "../../components/Conversation/Conversation";
-import LogoSearch from "../../components/LogoSearch/LogoSearch";
-import NavIcons from "../../components/NavIcons/NavIcons";
 import "./Chat.css";
 import { useEffect } from "react";
 import { userChats } from "../../redux/api/ChatRequests";
 import { useDispatch, useSelector } from "react-redux";
 import { io } from "socket.io-client";
+import Topbar from "../../components/TopBar/Topbar";
 
 const Chat = () => {
   const dispatch = useDispatch();
@@ -66,44 +65,44 @@ const Chat = () => {
   };
 
   return (
-    <div className="Chat">
-      {/* Left Side */}
-      <div className="Left-side-chat">
-        <LogoSearch />
-        <div className="Chat-container">
-          <h2>Chats</h2>
-          <div className="Chat-list">
-            {chats.map((chat) => (
-              <div
-                onClick={() => {
-                  setCurrentChat(chat);
-                }}
-              >
-                <Conversation
-                  data={chat}
-                  currentUser={user._id}
-                  online={checkOnlineStatus(chat)}
-                />
-              </div>
-            ))}
+    <>
+      <Topbar />
+      <div className="Chat">
+        {/* Left Side */}
+        <div className="Left-side-chat">
+          
+          <div className="Chat-container">
+            <h2>Chats</h2>
+            <div className="Chat-list">
+              {chats.map((chat) => (
+                <div
+                  onClick={() => {
+                    setCurrentChat(chat);
+                  }}
+                >
+                  <Conversation
+                    data={chat}
+                    currentUser={user._id}
+                    online={checkOnlineStatus(chat)}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Right Side */}
+        {/* Right Side */}
 
-      <div className="Right-side-chat">
-        <div style={{ width: "20rem", alignSelf: "flex-end" }}>
-          <NavIcons />
+        <div className="Right-side-chat">
+          <ChatBox
+            chat={currentChat}
+            currentUser={user._id}
+            setSendMessage={setSendMessage}
+            receivedMessage={receivedMessage}
+          />
         </div>
-        <ChatBox
-          chat={currentChat}
-          currentUser={user._id}
-          setSendMessage={setSendMessage}
-          receivedMessage={receivedMessage}
-        />
       </div>
-    </div>
+    </>
   );
 };
 

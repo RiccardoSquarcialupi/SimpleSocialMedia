@@ -1,61 +1,99 @@
-
-.FollowersCard{
-    width: 100%;
-    border-radius: 0.7rem;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    font-size: 13px;
-    max-height: 10rem;
-}
-.follower{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.rightbar {
+  flex: 2;
 }
 
-.follower>div{
-    display: flex;
-    gap: 10px;
+.rightbarTitle {
+  margin: 5% 5% 5% 25%;
+  
 }
 
-
-.followerImage{
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 50%;
+.rightbarFriendList {
+  padding: 0;
+  margin: 0;
 }
 
-.name{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+.rightbarTitle {
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.name>span:nth-of-type(1){
-    font-weight: bold;
+.rightbarInfo {
+  margin-bottom: 30px;
 }
 
-
-
-.fc-button{
-    height: 2rem;
-    padding-left: 20px;
-    padding-right: 20px;
+.rightbarInfoItem {
+  margin-bottom: 10px;
 }
 
-.UnfollowButton{
-    color: var(--orange);
-    border: 2px solid var(--orange);
-    cursor: pointer;
-    background: transparent;
+.rightbarInfoKey {
+  font-weight: 500;
+  margin-right: 15px;
+  color: #555;
 }
 
+.rightbarInfoValue {
+  font-weight: 300;
+}
 
-.FollowersCard>span{
-    font-weight: bold;
-    color: var(--buttonBg);
-    align-self: center;
-    cursor: pointer;
+.rightbarFollowings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.rightbarFollowing {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.rightbarFollowingImg {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.rightbarFriend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+  margin-left: 35%;
+}
+
+.rightbarProfileImgContainer {
+  margin-right: 10px;
+  position: relative;
+}
+
+.fc-button {
+  height: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.UnfollowButton {
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  cursor: pointer;
+  background: transparent;
+}
+
+.rightbarProfileImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rightbarUsername {
+  font-weight: 500;
+}
+
+.showmoreSpan {
+  font-weight: bold;
+  color: var(--buttonBg);
+  align-self: center;
+  cursor: pointer;
 }

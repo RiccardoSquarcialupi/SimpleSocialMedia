@@ -1,79 +1,72 @@
-.PostShare{
-    display: flex;
-    gap: 1rem;
-    background-color: var(--cardColor);
-    padding: 1rem;
-    border-radius: 1rem;
+.PostShare {
+  width: 95%;
+  flex: 5;
+  border-radius: 2%;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.68);
+  margin: 30px 0;
 }
 
-
-.PostShare>img{
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+.PostShare > img {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
 }
-.PostShare>div{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    gap: 1rem;
+.PostShare > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
 }
-
-.PostShare>div>input{
-    background-color: var(--inputColor);
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 17px;
-    border: none;
-    outline: none;
+.PostShare > div > input {
+  background-color: var(--inputColor);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  outline: none;
 }
 
-
-
-
-
-.postOptions{
-    display: flex;
-    justify-content: space-around;
+.postOptions {
+  display: flex;  
+  align-items: center;
+  justify-content: space-between;
 }
 
-.option{
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
 }
 
-.option:hover{
-    cursor: pointer;
+.option:hover {
+  cursor: pointer;
 }
-.ps-button{
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 12px;
-}
-
-
-.previewImage{
-    position: relative;
-    /* display: flex; */
+.ps-button {
+  width: 15%;
+  position: sticky;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 12px;
 }
 
-.previewImage>svg{
-    position: absolute;
-    right: 1rem;
-    top: 0.5rem;
-    cursor: pointer;
+.previewImage {
+  position: relative;
+  /* display: flex; */
 }
 
-.previewImage>img{
-    width: 100%;
-    max-height: 20rem;
-    object-fit: cover;
-    border-radius: 0.5rem;
+.previewImage > svg {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  cursor: pointer;
+}
+
+.previewImage > img {
+  width: 50%;
+  max-height: 20rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }

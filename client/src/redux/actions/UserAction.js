@@ -13,6 +13,11 @@ export const updateUser=(id, formData)=> async(dispatch)=> {
     }
 }
 
+export const getUser=(id)=> async(dispatch)=> {
+    dispatch({type: "GET_USER", data: id})
+    UserApi.getUser(id)
+}
+
 
 export const followUser = (id, data)=> async(dispatch)=> {
     dispatch({type: "FOLLOW_USER", data: id})

@@ -1,6 +1,5 @@
 import React from "react";
 import "./ProfileCard.css";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 const ProfileCard = ({location}) => {
   const { user } = useSelector((state) => state.authReducer.authData);
@@ -8,73 +7,33 @@ const ProfileCard = ({location}) => {
   const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
 
   return (
-    <div className="ProfileCard">
-      <div className="ProfileImages">
-        <img
-          src={
-            user.coverPicture
-              ? serverPublic + user.coverPicture
-              : serverPublic + "defaultCover.jpg"
-          }
-          alt="CoverImage"
-        />
-        <img
-          src={
-            user.profilePicture
-              ? serverPublic + user.profilePicture
-              : serverPublic + "defaultProfile.png"
-          }
-          alt="ProfileImage"
-        />
-      </div>
-      <div className="ProfileName">
-        <span>
-          {user.firstname} {user.lastname}
-        </span>
-        <span>{user.worksAt ? user.worksAt : "Write about yourself"}</span>
-      </div>
-
-      <div className="followStatus">
-        <hr />
-        <div>
-          <div className="follow">
-            <span>{user.followers.length}</span>
-            <span>Followers</span>
-          </div>
-          <div className="vl"></div>
-          <div className="follow">
-            <span>{user.following.length}</span>
-            <span>Following</span>
-          </div>
-          {/* profileage */}
-          {location === "profilePage" && (
-            <>
-              <div className="vl"></div>
-              <div className="follow">
-                <span>
-                  {posts.filter((post) => post.userId === user._id).length}
-                </span>
-                <span>Posts</span>
-              </div>{" "}
-            </>
-          )}
+      <div className="profileRightTop">
+        <div className="profileCover">
+          <img
+            className="profileCoverImg"
+            src={
+              user.coverPicture
+                ? serverPublic + user.coverPicture
+                : serverPublic + "defaultCover.jpg"
+            }
+            alt="CoverImage"
+          />
+          <img
+            className="profileUserImg"
+            src={
+              user.profilePicture
+                ? serverPublic + user.profilePicture
+                : serverPublic + "defaultProfile.png"
+            }
+            alt="ProfileImage"
+          />
         </div>
-        <hr />
+        <div className="profileInfo">
+          <h4 className="profileInfoName">
+            {user.firstname} {user.lastname}
+          </h4>
+        </div>
       </div>
-
-      {location === "profilePage" ? (
-        ""
-      ) : (
-        <span>
-          <Link
-            to={`/profile/${user._id}`}
-            style={{ textDecoration: "none", color: "#5507a8" }}
-          >
-            My Profile
-          </Link>
-        </span>
-      )}
-    </div>
   );
 };
 
