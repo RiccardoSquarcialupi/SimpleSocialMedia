@@ -1,6 +1,7 @@
 .Posts
 {
-    width: 95%;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    width: 100%;
     align-items: center;
     flex-direction: column;
 }

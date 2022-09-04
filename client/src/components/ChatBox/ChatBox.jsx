@@ -106,15 +106,16 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
                       {userData?.firstname} {userData?.lastname}
                     </span>
                   </div>
+                  <hr
+                    style={{
+                      width: "97%",
+                      position: "absolute",
+                      border: "0.1px solid #ececec",
+                      marginTop: "5px",
+                    }}
+                  />
                 </div>
               </div>
-              <hr
-                style={{
-                  width: "95%",
-                  border: "0.1px solid #ececec",
-                  marginTop: "20px",
-                }}
-              />
             </div>
             {/* chat-body */}
             <div className="chat-body">
@@ -136,7 +137,6 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
             </div>
             {/* chat-sender */}
             <div className="chat-sender">
-              <div onClick={() => imageRef.current.click()}>+</div>
               <InputEmoji value={newMessage} onChange={handleChange} />
               <div className="send-button button" onClick={handleSend}>
                 Send

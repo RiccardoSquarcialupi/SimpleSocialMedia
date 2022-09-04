@@ -26,6 +26,7 @@ const Conversation = ({ data, currentUser, online }) => {
       <div className="follower conversation">
         <div>
           {online && <div className="online-dot"></div>}
+          {!online && <div className="offline-dot"></div>}
           <img
             src={
               userData?.profilePicture
@@ -40,8 +41,8 @@ const Conversation = ({ data, currentUser, online }) => {
             <span>
               {userData?.firstname} {userData?.lastname}
             </span>
-            <span style={{ color: online ? "#51e200" : "" }}>
-              {online ? "Online" : "Offline"}
+            <span style={{ color: online ? "#51e200" : "red" }}>
+              {online ? " Online" : " Offline"}
             </span>
           </div>
         </div>

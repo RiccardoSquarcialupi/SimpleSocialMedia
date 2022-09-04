@@ -15,8 +15,6 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
   const dispatch = useDispatch();
   const param = useParams();
 
-  const { user } = useSelector((state) => state.authReducer.authData);
-  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -33,6 +31,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let UserData = formData;
+    console.log(UserData);
     if (profileImage) {
       const data = new FormData();
       const fileName = Date.now() + profileImage.name;

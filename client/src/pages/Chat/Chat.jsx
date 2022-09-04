@@ -4,12 +4,11 @@ import Conversation from "../../components/Conversation/Conversation";
 import "./Chat.css";
 import { useEffect } from "react";
 import { userChats } from "../../redux/api/ChatRequests";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { io } from "socket.io-client";
 import Topbar from "../../components/TopBar/Topbar";
 
 const Chat = () => {
-  const dispatch = useDispatch();
   const socket = useRef();
   const { user } = useSelector((state) => state.authReducer.authData);
 

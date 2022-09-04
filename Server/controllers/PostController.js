@@ -47,8 +47,8 @@ export const updatePost = async (req, res) => {
 // delete a post
 export const deletePost = async (req, res) => {
   const id = req.params.id;
-  const { userId } = req.body;
-
+  //const userId = req
+  const userId = req.query.userId;
   try {
     const post = await PostModel.findById(id);
     if (post.userId === userId) {

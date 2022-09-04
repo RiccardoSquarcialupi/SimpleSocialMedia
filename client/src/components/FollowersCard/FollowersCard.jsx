@@ -42,7 +42,7 @@ const FollowersCard = ({ profile }) => {
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">Lives in:</span>
             <span className="rightbarInfoValue">
-              {user.livesin ? user.livesin : "Not known"}
+              {user.livesIn ? user.livesIn : "Not known"}
             </span>
           </div>
           <div className="rightbarInfoItem">
@@ -52,7 +52,7 @@ const FollowersCard = ({ profile }) => {
             </span>
           </div>
           <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">Relationship:</span>
+            <span className="rightbarInfoKey">Relation:</span>
             <span className="rightbarInfoValue">
               {user.relationship ? user.relationship : "Not known"}
             </span>

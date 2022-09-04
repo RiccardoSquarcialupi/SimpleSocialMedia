@@ -1,6 +1,7 @@
 .topbarContainer {
   width: auto;
   height: 75px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   background: var(--buttonBg);
   display: flex;
   align-items: center;
@@ -27,12 +28,13 @@
   border-radius: 10%;
 }
 
+
 .logo {
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
-  font-size: 140%;
-  margin-left: 20px;
+  font-size: 150%;
+  margin-left: 2%;
   margin-top: 10px;
   font-weight: bold;
   color: white;
@@ -40,21 +42,29 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 500px) {
-    .s-icon {
-        display: none;
+@media only screen and (max-width: 440px) {
+  .logo {
+    font-size: 90%;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .logo {
+    display:none;
+  }
+}
 
-    }
+@media only screen and (max-width: 522px) {
     .Search{
-      display: none;
+      width: 80%;
+      margin-left: 5%;
+    }
+    .Search>input{
+      width: 100%;
     }
 }
 .s-icon{
-  white-space:nowrap;
-  overflow:hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
   background: var(--buttonBg);
   border-radius: 5px;
   padding: 4px;

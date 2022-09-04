@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import Chat from "./pages/Chat/Chat";
 
 function App() {
-  const [searchParams, setSearchParams] = useSearchParams();
   const user = useSelector((state) => state.authReducer.authData);
   return (
     <div

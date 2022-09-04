@@ -1,10 +1,15 @@
 .Profile{
     position: relative;
     display: grid;
-    grid-template-columns: auto auto auto;
     gap: 1rem;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
+@media only screen and (min-width: 565px) {
+  .Profile{
+    grid-template-columns: auto auto auto;
+  }
+}
 
 .Profile-center{
     display: flex;

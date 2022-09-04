@@ -9,8 +9,8 @@ const Profile = () => {
   return (
     <>
       <Topbar />
-      <div className="profile">
-        <TrendCard />
+      <div className="Profile">
+        <TrendCard className="firstTrend" />
         <div className="profileRight">
           <ProfileCard location="profilePage" />
           <div className="profileRightBottom">

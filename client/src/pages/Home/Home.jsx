@@ -1,4 +1,3 @@
-import { Grid } from "@mui/material";
 import React from "react";
 import FollowersCard from "../../components/FollowersCard/FollowersCard";
 import PostSide from "../../components/PostSide/PostSide";
@@ -10,7 +9,7 @@ const Home = () => {
     <>
       <Topbar />
       <div className="Home">
-        <TrendCard />
+        <TrendCard className="firstTrend" />
         <PostSide />
         <FollowersCard />
       </div>

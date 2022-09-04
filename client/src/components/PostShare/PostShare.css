@@ -1,5 +1,6 @@
 .PostShare {
   width: 95%;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   flex: 5;
   border-radius: 2%;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.68);
@@ -28,9 +29,10 @@
 }
 
 .postOptions {
+  width: 90%;
   display: flex;  
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .option {

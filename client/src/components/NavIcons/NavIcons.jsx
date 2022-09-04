@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import SendIcon from "@mui/icons-material/Send";
 import HomeIcon from "@mui/icons-material/Home";
-import Logo from "../../img/logo.png";
 import PersonIcon from "@mui/icons-material/Person";
 
 import { Link } from "react-router-dom";
