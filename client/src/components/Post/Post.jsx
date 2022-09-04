@@ -37,8 +37,8 @@ const Post = ({ data }) => {
             <img
               className="postProfileImg"
               src={
-                user.profilePicture
-                  ? server + user.profilePicture
+                data.imageUser
+                  ? server + data.imageUser
                   : server + "defaultProfile.png"
               }
               alt=""
